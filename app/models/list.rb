@@ -5,6 +5,6 @@ class List < ApplicationRecord
   # (but not the movies as they can be referenced in other lists).
   has_many :movies, through: :bookmarks
 
-  validates :name, presence: true
-  validates :name, uniqueness: { case_sensitive: false }
+  validates :name, uniqueness: true, presence: true
+  # validates :name, uniqueness: { case_sensitive: false }
 end
